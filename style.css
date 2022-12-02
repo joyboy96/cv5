@@ -10,6 +10,7 @@ body {
 }
 .container div{
     width: 50px;
+    
 }
 
 .some-class div{
@@ -25,7 +26,25 @@ h1 {
   text-decoration: overline;
   letter-spacing: 40px;
   padding: 20px;
+  /* animation: name duration  iteration-count direction; */
   
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 2s, 2s;
+
+
+}
+
+@keyframes slidein{
+    from {
+        margin-left: 2%;
+        width: 100%;
+    }
+    to {
+        margin-left:  40%;
+        width: 0%;
+    }
 }
 h2 {
   color: yellow;
@@ -49,12 +68,36 @@ th {
 img {
   border-radius: 80%;
   text-align: center;
+  transition: width 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+  /* animation-duration: 1s; */
   
 }
 footer {
   border-radius: 2%;
   display: flex;
   padding: 20px;
+  color: yellow;
+  align-content: center;
+  border: 2px solid yellow;
+  border-radius: 35px;
+  animation-name: slidein2;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s, 1s;
+  
+}
+@keyframes slidein2{
+    from {
+        margin-top: 5%;
+        height: 1%;
+    }
+    to {
+        margin-right: 75%;
+        height: 90%;
+    }
 }
 p {
   text-decoration: overline;
@@ -62,6 +105,7 @@ p {
 }
 .gallery {
   width: 300px;
+  position: sticky;
 }
 .gallery2 {
   width: 100px;
@@ -71,6 +115,8 @@ p {
   border-radius: 20%;
   width: 300px;
   border: 2px solid yellow;
+  transition: width 1s, height 1s;
+  animation-iteration-count: infinite;
 }
 p {
   color: yellow;
@@ -80,20 +126,21 @@ tr {
   color: yellow;
   text-align: center;
 }
-footer {
-  color: yellow;
-  align-content: center;
-  border: 2px solid yellow;
-  border-radius: 35px;
-}
+
 a {
   background-position: center;
 }
 img {
   background-position: center;
   border: 5px solid yellow;
+  
 }
 #dota2 {
   border-radius: 50%;
   position: relative;
 }
+/* .position{
+    position: sticky;
+} */
+
+
